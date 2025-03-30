@@ -6,6 +6,9 @@ class Card:
         self.value = value # Instance attribute associated with value of the card
         self.suit = suit   # Instance attribute associated with suit of the card
 
+    # Define a string representation of the card
+    def __str__(self):
+        return f"{self.value} of {self.suit}"
 
 # Define a Deck Class
 class Deck:
@@ -15,6 +18,11 @@ class Deck:
         self.cards = [] # Instance attribute associated with the deck of cards that is empty at the start
         suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds']  # List of suits
         values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'] # List of face values
+
+
+# Testing the Card class
+card = Card('Ace', 'Hearts') # Create a card object
+print(card) # Print the value and suit of the card
 
 # Implement the shuffle() operation
     # Must return no value
