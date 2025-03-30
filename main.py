@@ -19,10 +19,25 @@ class Deck:
         suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds']  # List of suits
         values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'] # List of face values
 
+        # Create a card for each combination of value and suit and add it to the deck
+        for suit in suits: # Loop through each suit
+            for value in values: # Loop through each value
+                self.cards.append(Card(value, suit)) # Append the card to the deck
+
+    # Define a string representation of each card in the deck
+    def __str__(self):
+        return ", ".join(str(card) for card in self.cards) 
 
 # Testing the Card class
-card = Card('Ace', 'Hearts') # Create a card object
-print(card) # Print the value and suit of the card
+# card = Card('Ace', 'Hearts') # Create a card object
+# print(card) # Print the value and suit of the card
+
+# Testing the Deck class
+deck = Deck() # Create a deck object
+print(len(deck.cards)) # Print the number of cards in the deck (should be 52)
+print(deck.cards[0]) # Print the first card in the deck
+print(deck.cards[51]) # Print the last card in the deck
+print(deck) # Print the entire deck of cards, each split by a comma
 
 # Implement the shuffle() operation
     # Must return no value
