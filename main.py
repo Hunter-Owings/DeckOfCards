@@ -34,7 +34,6 @@ class Deck:
             rand_card = random.randint(0, card) # Picks a random card from the deck
             self.cards[card], self.cards[rand_card] = self.cards[rand_card], self.cards[card] # Swap the current card with the randomly selected card
 
-
 # Implement the dealOneCard() operation
     def dealOneCard(self):
         if len(self.cards) == 0: # If the deck is empty
@@ -42,21 +41,13 @@ class Deck:
             return None # Returns None
         else:
             dealt_card = self.cards.pop() # Return the last card in the deck
+
         print("Card dealt: ", dealt_card) # Prints if a card is dealt
         print("Cards left in deck: ", len(self.cards)) # Prints the number of cards left in the deck
-        # return dealt_card # Returns one card from the deck to the caller
-
-    # A call to shuffle mused be followed by 52 calls to dealOneCard()
-    # this should result in the caller being provided all 52 cards of the deck in a random order
-    # if the caller makes a 53rd call to dealOneCard(), the caller should receive None
-
+        
 # Testing the shuffle and dealOneCard operations
 deck = Deck() # Create a deck object
 deck.shuffle() # Shuffle the deck of cards
 for card in range(52): # Loop through each card in the deck
     deck.dealOneCard() # Deal one card from the deck
 deck.dealOneCard() # Should return None since the deck is empty now
-
-# Must implement the principle of least surprise
-
-# Add security checks to ensure that the code meets the requirements for Appian's security standards
