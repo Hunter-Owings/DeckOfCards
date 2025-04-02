@@ -46,7 +46,7 @@ class Deck:
     # Implement the dealOneCard() operation
     def dealOneCard(self):
         if self.current_index >= len(self.cards): # If the deck is empty
-            print("No card dealt, deck is empty") # Prints if there are no cards in deck
+            print("No card dealt, deck is empty!") # Prints if there are no cards in deck
             return None # Returns None
         else: # If there are cards in the deck
             dealt_card = self.cards[self.current_index] # Return the card at the current index
@@ -62,6 +62,8 @@ deck = Deck() # Create a deck object
 deck.shuffle() # Shuffle the deck of cards
 for card in range(52): # Loop through each card in the deck
     deck.dealOneCard() # Deal one card from the deck
-deck.dealOneCard() # Should return None since the deck is empty now
 
 print("Cards left in deck: ", deck.cards_left()) # Prints the number of cards left in the deck
+
+deck.dealOneCard() # Should return None since the deck is empty now
+
