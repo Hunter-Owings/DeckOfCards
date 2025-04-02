@@ -46,7 +46,7 @@ class Deck:
     # Implement the dealOneCard() operation
     def dealOneCard(self):
         if self.current_index >= len(self.cards): # If the deck is empty
-            print("Deck is empty") # Prints if there are no cards in deck
+            print("No card dealt, deck is empty") # Prints if there are no cards in deck
             return None # Returns None
         else: # If there are cards in the deck
             dealt_card = self.cards[self.current_index] # Return the card at the current index
