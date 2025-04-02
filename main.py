@@ -65,5 +65,5 @@ for card in range(52): # Loop through each card in the deck
 
 print("Cards left in deck: ", deck.cards_left()) # Prints the number of cards left in the deck
 
-deck.dealOneCard() # Should return None since the deck is empty now
+deck.dealOneCard() # Should return None with print statement since the deck is empty now
 
